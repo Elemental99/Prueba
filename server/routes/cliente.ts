@@ -10,7 +10,7 @@ const router = Router();
 
 router.get('/login', loginCliente);
 router.get('/ver/:id', obtenerClienteById);
-router.get('/', obtenerClientes);
-router.post('/', crearCliente);
+router.get('/', obtenerClientes); // Obtener todos los clientes
+router.post('/', crearCliente); // Crear un nuevo cliente
 
 export default router;
