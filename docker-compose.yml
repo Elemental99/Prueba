@@ -7,7 +7,7 @@ services:
             dockerfile: Dockerfile
         restart: always
         ports:
-            - '3000:3000'
+            - '${PORT_BACKEND}:3000'
         depends_on:
             - mongo
         volumes:
@@ -19,7 +19,7 @@ services:
             context: ./client
             dockerfile: Dockerfile
         ports:
-            - '4200:4200'
+            - '${PORT_FRONTEND}:4200'
         depends_on:
             - backend
         volumes:
@@ -30,5 +30,5 @@ services:
         container_name: mongo
         image: mongo
         ports:
-            - '27019:27017'
+            - '${PORT_MONGO}:27017'
         command: mongod --quiet --logpath /dev/null
