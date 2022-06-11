@@ -1,6 +1,4 @@
 node_modules
-.idea
 .env
 dist/
-.vscode
-.angular
+npm-debug.log
