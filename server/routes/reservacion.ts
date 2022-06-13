@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import {
-	crearReservacion,
-	obtenerReservacion,
-	actualizarReservacion,
-	borrarReservacion,
-	obtenerReservaciones,
+    actualizarReservacion,
+    borrarReservacion,
+    crearReservacion,
+    obtenerReservacion,
+    obtenerReservaciones,
 } from '../controllers/reservacion';
 
 const router = Router();

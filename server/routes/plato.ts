@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { obtenerPlatos, crearPlato } from '../controllers/plato';
+import { crearPlato, obtenerPlatos } from '../controllers/plato';
 
 const router = Router();
 

@@ -25,10 +25,10 @@ export class Server {
     private _express: express.Application;
     
     constructor() {
-        this.app = express.Router();
+        this.app    = express.Router();
         this.router = express.Router();
-        this.port = process.env.PORT || 4000;
-        this.paths = {
+        this.port   = process.env.PORT || 4000;
+        this.paths  = {
             bar        : '/api/bar',
             cliente    : '/api/cliente',
             menu       : '/api/menu',

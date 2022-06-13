@@ -1,4 +1,4 @@
-import { Response, Request } from 'express';
+import { Request, Response } from 'express';
 import { Cliente } from '../models';
 import { createToken as jwt } from '../helpers/jwt';
 

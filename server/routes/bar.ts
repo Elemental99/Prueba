@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { obtenerBares, crearBar } from '../controllers/bar';
+import { crearBar, obtenerBares } from '../controllers/bar';
 
 const router = Router();
 

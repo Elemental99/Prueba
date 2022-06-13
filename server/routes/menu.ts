@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { obtenerMenus, crearMenu } from '../controllers/menu';
+import { crearMenu, obtenerMenus } from '../controllers/menu';
 
 const router = Router();
 
