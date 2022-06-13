@@ -12,7 +12,7 @@ export const obtenerClientes = async (req: Request, res: Response) => {
 };
 
 export const obtenerClienteById = async (req: Request, res: Response) => {
-    const { id } = req.params;
+    const { id }  = req.params;
     const cliente = await Cliente.findById(id);
     if ( cliente ) return res.status(200).send({ cliente: cliente });
     return res.status(200).send({
@@ -59,7 +59,7 @@ export const crearCliente = async (req: Request, res: Response) => {
 // };
 
 export const loginCliente = async (req: Request, res: Response) => {
-    const body = req.query;
+    const body           = req.query;
     const clientelogeado = await Cliente.findOne({ user: body.user });
     
     if ( clientelogeado ) {

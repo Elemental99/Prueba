@@ -2,11 +2,11 @@ import { Request, Response } from 'express';
 import { Plato } from '../models';
 
 export const obtenerPlatos = async (req: Request, res: Response) => {
-	const query = { estado: true };
-	const [platos] = await Promise.all([Plato.find(query)]);
-	res.json({
-		platos,
-	});
+    const query    = { estado: true };
+    const [platos] = await Promise.all([Plato.find(query)]);
+    res.json({
+        platos,
+    });
 };
 
 // const obtenerPlato = async (req,res= response) =>{
@@ -15,8 +15,8 @@ export const obtenerPlatos = async (req: Request, res: Response) => {
 //     res.json(plato);
 // }
 
-export const crearPlato = async (req: Request, res: Response )=>{
-    const { ...body } =  req.body;
+export const crearPlato = async (req: Request, res: Response) => {
+    const { ...body } = req.body;
     // const platoExiste = await Plato.findOne({ nombre:body.nombre });
     // if (platoExiste){
     //     res.status(400).json({
@@ -24,10 +24,10 @@ export const crearPlato = async (req: Request, res: Response )=>{
     //         `El plato que desea crear ya existe ${platoExiste.nombre}`
     //     })
     // }
-    const plato = new Plato(body);
-    const platoNuevo =  await plato.save();
+    const plato      = new Plato(body);
+    const platoNuevo = await plato.save();
     res.status(201).json(platoNuevo);
-}
+};
 
 // const actualizarPlato = async (req, res = response) => {
 // 	const { id } = req.params;

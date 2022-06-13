@@ -5,9 +5,9 @@ import Reservacion from './reservacion';
 import Plato from './plato';
 
 export {
-	Bar,
-	Menu,
-	Cliente,
-	Reservacion,
-	Plato,
+    Bar,
+    Menu,
+    Cliente,
+    Reservacion,
+    Plato,
 };

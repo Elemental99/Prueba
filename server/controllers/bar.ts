@@ -29,16 +29,16 @@ export const obtenerBares = async (req: Request, res: Response) => {
 
 export const crearBar = async (req: Request, res: Response) => {
     const { ...body } = req.body;
-    // const barExiste = Bar.findOne({ nombre: body.nombre });
+    // const barExiste   = Bar.findOne({ nombre: body.nombre });
     // if ( barExiste ) {
-    //     const { nombre: string } = barExiste;
+    //     const { nombre } = barExiste;
     //     res.status(400).json({
     //         message: `El bar con ese nombre ya existe ${ nombre }`,
     //     });
     // }
-    const bar = new Bar(body);
-    const barNuevo = await bar.save();
-    res.status(201).json(barNuevo);
+    const bar      = new Bar(body);
+    const barNuevo = await bar.save(); // Guardar el bar en la base de datos
+    res.status(201).json({ bar: barNuevo });
 };
 
 // const actualizarBar = async (req, res = response) => {
